@@ -6,7 +6,7 @@
 export default async function handler(req, res) {
   try {
     const { url } = req.query;
-    const target = decodeURIComponent(url || process.env.AVITO_SELLER_URL || "");
+    const target = decodeURIComponent(url || process.env.AVITO_SELLER_URL || "https://github.com/kseniakman/avito-reviews-proxy.git");
 
     if (!target) {
       return res.status(400).json({ ok: false, error: "Missing AVITO_SELLER_URL or ?url=" });
